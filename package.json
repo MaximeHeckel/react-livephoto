@@ -17,7 +17,6 @@
     "dist:modules": "rimraf ./dist-modules && babel ./src --out-dir ./dist-modules",
     "preversion": "npm run test && npm run dist && npm run dist:min && git commit --allow-empty -am \"Update dist\"",
     "prepublish": "npm run dist:modules",
-    "postpublish": "npm run gh-pages && npm run gh-pages:deploy",
     "postinstall": "node lib/post_install.js"
   },
   "main": "dist-modules",
@@ -38,6 +37,7 @@
     "chai": "^3.5.0",
     "clean-webpack-plugin": "^0.1.14",
     "css-loader": "^0.26.1",
+    "enzyme": "^2.8.2",
     "eslint": "^3.12.2",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-loader": "^1.6.1",

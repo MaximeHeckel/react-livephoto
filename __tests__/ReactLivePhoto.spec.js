@@ -1,6 +1,6 @@
 import React from 'react';
 import { expect } from 'chai';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import LivePhoto from '../src/';
 
 const getBaseProps = () => {
@@ -21,12 +21,9 @@ beforeEach(() => {
 describe('ReactLivePhoto', () => {
   it('Renders the LivePhoto component', () => {
     const props = {
-      width: 300,
-      height: 300,
-      imageSrc: 'http://example.com/path/file.jpg',
-      videoSrc: 'http://example.com/path/file.mov',
+      ...baseProps,
     };
-    const tree = renderer.create(<LivePhoto {...props} />);
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(<LivePhoto {...props} />);
+    expect(wrapper.find('.react-livephoto')).to.have.length(1);
   });
 });

@@ -10,8 +10,8 @@ module.exports = {
     "react"
   ],
   "rules": {
-    "arrow-body-style": ["error", "always"],
-    "comma-dangle": ["error"],
+    "arrow-body-style": [1, "as-needed"],
+    "comma-dangle": 0,
     "prefer-arrow-callback": 0,
     "func-names": 0,
     "import/no-extraneous-dependencies": 0,
