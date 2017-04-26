@@ -2,6 +2,7 @@
   "name": "react-livephoto",
   "description": "LivePhoto React Component",
   "author": "Maxime Heckel",
+  "user": "MaximeHeckel",
   "version": "0.5.1",
   "scripts": {
     "start": "webpack-dev-server",
